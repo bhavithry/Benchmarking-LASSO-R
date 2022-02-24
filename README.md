@@ -86,7 +86,9 @@ genes
 # Acknowledgement
 The authors would like to acknowledge the funding for this research from,
 1. TRU Internal Research Fund (IRF) awarded to Dr. Jabed Tomal, Department
-of Mathematics and Statistics, Thompson Rivers University
+of Mathematics and Statistics, Thompson Rivers University, and
+Dr Yan Yan, Department of Mathematics and Statistics, Thompson Rivers
+University.
 2. Natural Sciences and Engineering Research Council of Canada (NSERC)
 awarded to Dr. Jabed Tomal, Department of Mathematics and Statistics, Thompson
 Rivers University and Dr. Yan Yan, Department of Computing Science,

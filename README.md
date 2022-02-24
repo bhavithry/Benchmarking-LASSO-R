@@ -68,7 +68,7 @@ plot
 genes
 
 
-
+![Venn Diagram](./bhavithry/Benchmarking-LASSO-R/venn_123818.png?raw=true "Fig 1")
 
 # Acknowledgement
 The authors would like to acknowledge the funding for this research from,

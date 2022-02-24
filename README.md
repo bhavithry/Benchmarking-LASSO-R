@@ -10,25 +10,10 @@
 
 # Abstract
 
-Single Cell RNA Sequencing (scRNA-seq) technology has enabled
-biological research community to explore gene expression at a single
-cell resolution. By studying differences in gene expression, it is possible
-to differentiate cell clusters and types within tissues. One of the major
-challenges in scRNA-seq study, which lies prior to clustering, is feature
-selection of high dimensional data. There are several statistical and machine
-learning algorithms available to solve this problem but their performances
-across data sets lacks of systematic comparison. In this research,
-we benchmark different R packages for penalized regression algorithms,
-such as LASSO and some of its variants, which claimed to be suitable
-for scRNA-seq data. Results on four different scRNA-seq datasets show
-that Sparse Group Lasso (SGL) implemented by SGL R package performs
-better than other algorithms in terms of AUC. The computational
-time for different R packages vary between data sets. Based on these
-findings, we proposed a new pipeline for scRNA-seq clustering which applied
-SGL on a pre-selected subsets of genes. These selected genes are
-the union of top genes from glmnet and droplasso packages. Experiments
-on the proposed pipeline demonstrated an improvement in performance
-than executing SGL alone on the whole original data sets.
+Single Cell RNA Sequencing (scRNA-seq) technology has enabled biological research community to explore gene expression at a single cell resolution. By studying differences in gene expression, it is possible to differentiate cell clusters and types within tissues. One of the major challenges in scRNA-seq study is feature selection of high dimensional data. There are several statistical and machine learning algorithms available to solve this problem but their performances across data sets lack systematic comparison. In this research, we benchmark different penalized regression algorithms in R which are suitable for scRNA-seq data. Results on four different scRNA-seq
+data sets show that Sparse Group Lasso (SGL) implemented by SGL R package performs better than other methods in terms of area under the receiver operating curve (AUC). The computation time for different algorithms vary between data sets with SGL having least average computation time across data sets. Based on our findings, we propose a new method for scRNA-seq clustering which applied SGL on a pre-selected subsets of genes. These selected genes are the union of top genes from ridge, lasso, elastic net, and droplasso algorithms. The proposed method demonstrate an improvement in AUC compared to SGL.
+
+Key Words: Single Cell RNA Sequencing; Machine Learning; LASSO; Feature Selection; High Dimensional Data; R Programming Language.
 
 # Technologies
 Software: R Version 4.1.2

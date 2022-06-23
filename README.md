@@ -84,4 +84,4 @@ The authors also acknowledges Compute Canada for hosting the 32GB Linux
 remote server which is used for computation in this research.
 
 # References
-Self Reference after publishing
+Puliparambil, B. S., Tomal, J., & Yan, Y. (2022). Benchmarking Penalized Regression Methods in Machine Learning for Single Cell RNA Sequencing Data. In RECOMB International Workshop on Comparative Genomics (pp. 295-310). Springer, Cham.

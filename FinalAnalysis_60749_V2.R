@@ -236,4 +236,42 @@ axis(side=1, at=1:10, labels = xtick
 write.xlsx(as.data.frame(top_genes$genes[1:20])
            , file = "New_Pipeline_Genes_60749.xlsx", overwrite = TRUE)
 
-########
+#######################
+# K-Means Clustering
+#######################
+library(readxl)
+# Import data
+##############
+setwd("C:/Users/bhavi/OneDrive/Desktop/Research/Data")
+
+# Import data
+cells <- read.csv("GSE60749_RnaSeq_single_cell_mESC_TPM.csv")
+gene <- cells$Gene
+
+# Transpose and change to data frame
+cells <- data.frame(t(data.matrix(cells[,-1])))
+colnames(cells) <- gene
+
+# Import top genes
+genes <- data.frame(read_xlsx("New_Pipeline_Genes_60749.xlsx"))
+genes <- unlist(list(genes[,1]))
+
+# Subset data with top genes
+cells <- cells[genes]
+
+cl <- kmeans(cells, centers = 2, nstart = 25)
+
+#par(mar=c(1,1,1,1))
+plot(cells[,1], cells[,3]
+     , col = cl$cluster
+     , xlab = "piRNA - 44441 (TPM)"
+     , ylab = "piRNA - 44260 (TPM)"
+     , main = "GSE60749 - Pluripotent Stem Cells of Mus musculus"
+      )
+legend("topright",legend=c("mESCs Cell", "Dgcr8 -/- mESCs Cell")
+       ,bty="n", pch = c(1,1)
+       ,col=c("red", "black")
+       ,cex = 0.9
+       ,text.font=2
+       ,title = "Cell Types"
+      )
